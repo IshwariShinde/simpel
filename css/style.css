@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+ 
+}
+.navbar{
+    background-color: #082032;
+    display: flex;
+    align-items: center;
+   
+    
+}
+.logo{
+    width: 50%;
+    margin:5px;
+}
+.logo img{
+    width: 50px;
+    
+
+}
+.menu{
+    width: 50%;
+
+}
+.navlist{
+    float: right;
+    display: flex;
+}
+.navlist li{
+    list-style: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+
+}
+.navlist li a{
+    color: white;
+    text-decoration: none;
+}
+.navlist li a:hover{
+    color: #F0A500;
+}
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 3px;
+    margin: 5px;
+
+}
+/*styling the login form*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+.login-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+   
+}
+.loginFormVisibility{
+    display: none;
+
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #e2e2e2;;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background-color: #080320;
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color:#f0a500;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  color: #f0a500;
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  /* transition: all 0.6s; */
+  transition: all 0.2s;
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #f0a500;
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #996a04;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background-color: #080320;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #f0a500;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media screen and (max-width:720px){
+    .navbar{
+        height: 303px;
+        transition: all 0.7s ease-out;
+    }
+
+    .nav-resp{
+        height: 60px;
+    }
+    .logo img{
+        position: absolute;
+        top: 5px;
+        left: 5%;
+        height: 49px;
+        width: 50px;
+    }
+    .navlist{
+        flex-direction: column;
+      
+      
+    }
+    .menu{
+        margin-top: 13%;
+        margin-right: 33%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .burger{
+       display: block;
+    }
+
+    .navlist-visibility{
+        visibility: hidden;
+    }
+}
